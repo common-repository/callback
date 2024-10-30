@@ -1,0 +1,129 @@
+/*
+Main:	#003e7e
+Hover:	#1A82C7
+Error:	#db2032
+*/
+
+/* Callback Button */
+#callback_apply {margin: 6px 0;}
+#callback_apply a {padding: 6px;text-decoration: none;color: #ffffff;background-color: #003e7e;}
+#callback_apply a:hover {padding: 6px;text-decoration: none;color: #ffffff;background-color: #1A82C7;}
+
+/* Callback Form */
+#callbackform div.inputlabel{;margin: 6px 0 2px 0;}
+#callbackform div.forminput{margin: 0;}
+#callbackform input[type=text] {-webkit-appearance: none;padding: 4px;font-family: inherit;font-size: inherit;height:auto!important;width: 100%;box-sizing: border-box;border: 1px solid #003e7e;}
+#callbackform .submit {font-family: inherit;font-size: inherit;height:auto;width: 100%;box-sizing: border-box;line-height:normal;margin: 12px 0 3px 0;padding: 6px;background: #003e7e;color:#FFF;text-align: center;cursor: pointer;border:none;}
+#callbackform .submit:hover {background-color: #1A82C7;}
+
+#callwhen {display:none;}
+
+.validator {margin-left: -999px;height:0;clear: both;}
+
+#callback .thankyoutitle {color: #003e7e;font-weight: 900;font-size: 20px;margin-bottom: 12px;}
+#callback .processing {display:none;text-align: right;margin-top: 12px;font-style: italic;}
+
+/* Error */
+#callbackform #error {display:none;color:red;font-weight: 900;}
+#callbackform input[type=text].warning {border: 1px solid #db2032;}
+
+/* Toggle */
+#callbackform.toggle {
+	display:none;
+}
+
+/* The Modal */
+#callbackform.modal {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+#callbackform .modal-content {
+	background-color: #fefefe;
+	padding: 20px;
+	border: 1px solid #003e7e;
+}
+
+/* Modal Content */
+#callbackform.modal .modal-content {
+	margin: auto;
+	width: 40%;
+}
+
+#callbackform .modal-content p,
+#callbackform .modal-content h2 {
+	color: #343848;
+}
+
+/* The Close Button */
+#callbackform .closemodal {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+#callback .closemodal:hover,
+#callback .closemodal:focus {
+	color: #343848;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Submitting Animation */
+.working_loading {
+	font: 4em Impact;
+	color: rgba(6, 115, 152, 1);
+	text-align: right;
+	line-height: 1em;
+}
+
+.buttons_working { display: none;}
+
+.working_loading:after {
+	content: ' .';
+	animation: dots 1s steps(5, end) infinite;
+	color: rgba(6, 115, 152, 1);
+}
+
+@keyframes dots {
+	0%, 20% {
+		color: rgba(6, 115, 152, 0);
+		text-shadow:
+			-.25em 0 0 rgba(6, 115, 152, 0),
+			-.5em 0 0 rgba(6, 115, 152, 0);
+	}
+	40% {
+		color: rgba(6, 115, 152, 0);
+		text-shadow:
+			-.25em 0 0 rgba(6, 115, 152, 0),
+			-.5em 0 0 rgba(6, 115, 152, 1);
+	}
+	60% {
+		color: rgba(6, 115, 152, 0);
+		text-shadow:
+			-.25em 0 0 rgba(6, 115, 152, 1),
+			-.5em 0 0 rgba(6, 115, 152, 1);
+	}
+	80%, 100% {
+		color: rgba(6, 115, 152, 1);
+		text-shadow:
+			-.25em 0 0 rgba(6, 115, 152, 1),
+			-.5em 0 0 rgba(6, 115, 152, 1);
+	}
+}
+
+
+@media only screen and (max-width:600px) {
+	#callbackform.modal .modal-content {width: 80%;}
+}
